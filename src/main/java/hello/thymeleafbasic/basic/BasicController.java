@@ -70,6 +70,14 @@ public class BasicController {
             return "Hello" + data;
         }
     }
+
+    @GetMapping("/link")
+    public String Link(Model model) {
+        model.addAttribute("param1","data1");
+        model.addAttribute("param2","data2");
+
+        return "basic/link";
+    }
     @Data
     public class User {
         private String username;
